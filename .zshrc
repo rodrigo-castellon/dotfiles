@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/rodrigo.castellon/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -100,11 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -alhF'
-alias m="kinit --keychain rjcaste@CS.STANFORD.EDU; ssh rjcaste@jamie.stanford.edu -t 'ssh sc'"
-alias b="kinit --keychain rjcaste@CS.STANFORD.EDU; ssh rjcaste@jamie.stanford.edu -t"
 
 alias gc='git add . && git commit -am "stuff"'
 alias gs='git status'
 
-# run the battery log thing
-bash log_battery.sh &
