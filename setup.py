@@ -21,7 +21,7 @@ for fpath in (home_dir / 'dotfiles').glob('*'):
 
     # check if it already exists, and if it does delete!
     if destination.exists():
-        if destination.is_folder():
+        if destination.isdir():
             shutil.rmtree(destination)
         else:
             os.remove(destination)
