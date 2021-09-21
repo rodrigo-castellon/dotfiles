@@ -28,12 +28,3 @@ if [ -f '/Users/rodrigo.castellon/google-cloud-sdk/path.bash.inc' ]; then . '/Us
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/rodrigo.castellon/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/rodrigo.castellon/google-cloud-sdk/completion.bash.inc'; fi
-
-# for NLP cluster
-alias homefs='sshfs scdt: ~/sc -o ssh_command='\''ssh -t rjcaste@jamie.stanford.edu ssh'\'''
-alias juicefs='sshfs rjcaste@jamie.stanford.edu:/juice/scr/rjcaste ~/juice'
-
-alias linux='ssh aoeu@192.168.0.21'
-alias pipessh='while true; do ssh -N -L 8889:localhost:8889 aoeu@192.168.0.21; done'
-alias m="kinit --keychain rjcaste@CS.STANFORD.EDU; ssh rjcaste@jamie.stanford.edu -t 'ssh sc'"
-alias b="kinit --keychain rjcaste@CS.STANFORD.EDU; ssh rjcaste@jamie.stanford.edu -t"
