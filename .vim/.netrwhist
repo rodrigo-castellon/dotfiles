@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/rodrigo.castellon/.oh-my-zsh'
+let g:netrw_dirhist_5='/usr/local/lib/python3.8/site-packages/portalocker'
+let g:netrw_dirhist_4='/Users/rodrigo.castellon/.vim'
+let g:netrw_dirhist_3='/Users/rodrigo.castellon/.bash_sessions'
+let g:netrw_dirhist_2='/Users/rodrigo.castellon/.config/fish/functions'
+let g:netrw_dirhist_1='/Users/rodrigo.castellon/.config/fish'
