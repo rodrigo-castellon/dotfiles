@@ -103,4 +103,7 @@ alias ll='ls -alhF'
 
 alias gc='git add . && git commit -am "stuff"'
 alias gs='git status'
+# tree "command"
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
 
