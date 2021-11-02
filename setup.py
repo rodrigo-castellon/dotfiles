@@ -27,4 +27,4 @@ for fpath in (home_dir / 'dotfiles').glob('*'):
             os.remove(destination)
 
     # move!
-    os.rename(fpath, destination)
+    shutil.move(fpath, destination)
