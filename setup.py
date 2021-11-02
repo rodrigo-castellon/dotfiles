@@ -14,10 +14,10 @@ EXCLUDE = [
 home_dir = Path(os.path.expanduser('~'))
 
 for fpath in (home_dir / 'dotfiles').glob('*'):
-    if fpath.stem in EXCLUDE:
+    if fpath.name in EXCLUDE:
         continue
 
-    destination = home_dir / fpath.stem
+    destination = home_dir / fpath.name
 
     # check if it already exists, and if it does delete!
     if destination.exists():
