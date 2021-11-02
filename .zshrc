@@ -101,6 +101,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll='ls -alhF'
 
+# tmux stuff
+alias tn="tmux -u -f $HOME/.tmux.conf new"
+alias ta="tmux -u -f $HOME/.tmux.conf attach"
+alias tl="tmux -u -f $HOME/.tmux.conf ls"
+alias tk="tmux kill-session -a"
+
 alias gc='git add . && git commit -am "stuff"'
 alias gs='git status'
 # tree "command"
