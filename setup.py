@@ -18,7 +18,7 @@ EXCLUDE = [
 ]
 
 if len(sys.argv) > 1:
-    home_dir = sys.argv[1]
+    home_dir = Path(sys.argv[1])
 else:
     home_dir = Path(os.path.expanduser('~'))
 
