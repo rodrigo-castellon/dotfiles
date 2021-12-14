@@ -1,7 +1,13 @@
 # python script to set up the dotfiles in the home directory
 
+# USAGE:
+# $ python3 setup.py
+# OR
+# $ python3 setup.py /home/dir
+
 import os
 import shutil
+import sys
 from pathlib import Path
 
 # only include the dotfiles we care about
@@ -11,7 +17,10 @@ EXCLUDE = [
     'LICENSE'
 ]
 
-home_dir = Path(os.path.expanduser('~'))
+if len(sys.argv) > 1:
+    home_dir = sys.argv[1]
+else:
+    home_dir = Path(os.path.expanduser('~'))
 
 for fpath in (home_dir / 'dotfiles').glob('*'):
     if fpath.name in EXCLUDE:
