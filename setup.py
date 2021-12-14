@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 
 # only include the dotfiles we care about
-EXCLUDE = [
+IGNORE = [
     'README.md',
     '.git',
     'LICENSE'
@@ -23,7 +23,7 @@ else:
     home_dir = Path(os.path.expanduser('~'))
 
 for fpath in (home_dir / 'dotfiles').glob('*'):
-    if fpath.name in EXCLUDE:
+    if fpath.name in IGNORE:
         continue
 
     destination = home_dir / fpath.name
