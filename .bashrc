@@ -26,3 +26,31 @@ alias gc='git add . && git commit -am "stuff"'
 alias gs='git status'
 # tree "command"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+
+##################
+# minimal prompt #
+##################
+
+# Depth of `$PWD` is decided by this.
+export PROMPT_DIRTRIM=2
+
+# `exit_code' Should be first command in `PROMPT_COMMAND' to be
+# executed or else return status will always be 0/true (If functions in
+# `PROMPT_COMMAND' are written proper :)
+[ -n "$PROMPT_COMMAND" ] && PROMPT_COMMAND="exit_code;$PROMPT_COMMAND" ||
+    PROMPT_COMMAND="exit_code"
+
+exit_code() {
+    EXIT="$?"
+
+    # PS1 needs to be reset or else it will be appended every time to
+    # previous one.
+    PS1=""
+
+    [ "$EXIT" = "0" ] && EXITCOL=$bldwht || EXITCOL=$bldred
+
+    # This will be final prompt, whatever set earlier will be
+    # overwritten by this.
+    export PS1="\[\$EXITCOL\]\w\[\033[01;38;5;208m\]\$([ \j -gt 0 ] && echo [\j])\[\$txtrst\]$ "
+}
